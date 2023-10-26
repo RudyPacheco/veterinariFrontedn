@@ -1,0 +1,309 @@
+<app-navbar></app-navbar>
+<section class="h-100 h-custom gradient-custom-2">
+    <form [formGroup]="registerForm" (ngSubmit)="registrarEsterilizacion()">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12">
+                    <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+                        <div class="card-body p-0">
+                            <div class="row g-0">
+                                <h1 class="text-center">Autorizacion Esterilizacion</h1>
+                                <div class="col-lg-6">
+
+                                    <div class="p-5">
+
+
+                                        <div class="row">
+                                            <div class="col-md-10 mb-4 pb-2">
+
+                                                <div class="form-outline">
+                                                    <label class="form-label" for="form3Examplev2">Nombres</label>
+                                                    <input type="text" id="form3Examplev2"
+                                                        class="form-control form-control-lg"
+                                                        formControlName="nombres" />
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+
+
+
+
+                                        <div class="form-outline">
+                                            <label class="form-label" for="form3Examplev5">DPI</label>
+                                            <input type="number" id="form3Examplev5"
+                                                class="form-control form-control-lg" formControlName="dpi" />
+
+                                        </div>
+
+                                        <div class="form-outline">
+                                            <label class="form-label" for="form3Examplev5">Nombre de la
+                                                mascota</label>
+                                            <input type="text" id="form3Examplev5" class="form-control form-control-lg"
+                                                formControlName="nombreMascota" />
+
+                                        </div>
+
+                                        <div class="col-md-8 mb-4 pb-2">
+                                            <div class="form-outline form-white">
+                                                <label class="form-label" for="form3Examplea2">Tipo de
+                                                    mascota</label>
+                                                <div class="form-outline">
+
+
+                                                    <select class="select form-control-lg" formControlName="tipo">
+                                                        <option value="0" disabled>Seleccione una opcion
+                                                        </option>
+                                                        <option value="1">Perro</option>
+                                                        <option value="2">Gato</option>
+                                                    </select>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-10 mb-4 pb-2">
+                                            <div class="form-outline form-white">
+                                                <label class="form-label" for="form3Examplea2">Vacunas</label>
+                                                <div class="form-outline">
+
+
+                                                    <select class="select form-control-lg" formControlName="vacunas">
+                                                        <option value="0" disabled>Seleccione una opcion
+                                                        </option>
+                                                        <option value="true">Si</option>
+                                                        <option value="false">No</option>
+                                                    </select>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-md-10 mb-4 pb-2">
+                                            <div class="form-outline form-white">
+                                                <label class="form-label" for="form3Examplea2">Preñada</label>
+                                                <div class="form-outline">
+
+
+                                                    <select class="select form-control-lg" formControlName="preanada">
+                                                        <option value="0" disabled>Seleccione una opcion
+                                                        </option>
+                                                        <option value="true">Si</option>
+                                                        <option value="false">No</option>
+                                                    </select>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-md-4 mb-4 pb-2">
+
+                                            <div class="form-outline">
+                                                <label class="form-label" for="form3Examplev5">Edad</label>
+                                                <input type="text" id="form3Examplev5"
+                                                    class="form-control form-control-lg"
+                                                    formControlName="edadMascota" />
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="mb-4 pb-2">
+                                            <div class="form-outline form-white">
+                                                <label class="form-label" for="form3Examplea3">Sufre de alguna
+                                                    enremedad/ha estado enfermo</label>
+                                                <input type="text" id="form3Examplea3"
+                                                    class="form-control form-control-lg"
+                                                    formControlName="enfermedad" />
+
+                                            </div>
+                                        </div>
+
+
+
+
+
+                                        <div class="form-outline">
+                                            <input type="date" class="form-control form-control-lg" id="birthdayDate"
+                                                formControlName="fecha" />
+                                            <label class="form-label" for="form3Examplev3">Fecha de
+                                                adopcion</label>
+                                        </div>
+
+                                        
+
+
+
+
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 bg-indigo ">
+                                    <div class="p-5">
+
+
+                                        <div class="mb-4 pb-2">
+                                            <div class="form-outline form-white">
+                                                <div class="form-outline">
+                                                    <label class="form-label" for="form3Examplea2">Direccion</label>
+                                                    <input type="text" id="form3Examplev3"
+                                                        class="form-control form-control-lg"
+                                                        formControlName="direccion" />
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="form-outline">
+                                            <label class="form-label" for="form3Examplev3">Numero de telefono</label>
+                                            <input type="text" id="form3Examplev3" class="form-control form-control-lg"
+                                                formControlName="telefono" />
+
+                                        </div>
+
+
+                                        <div class="form-outline">
+                                            <label class="form-label" for="form3Examplev3">Numero de turno</label>
+                                            <input type="text" id="form3Examplev3" class="form-control form-control-lg"
+                                                formControlName="numeroTurno" />
+
+                                        </div>
+
+                                        <div class="mb-4 pb-2">
+                                            <div class="form-outline form-white">
+                                                <label class="form-label" for="form3Examplea2">Sexo de la
+                                                    mascota</label>
+                                                <div class="form-outline">
+
+                                                    <select class="select form-control-lg" formControlName="sexo">
+                                                        <option value="0" disabled>Seleccione una opcion</option>
+                                                        <option value="1">Macho</option>
+                                                        <option value="2">Hembra</option>
+
+                                                    </select>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="mb-4 pb-2">
+                                            <div class="form-outline form-white">
+                                                <label class="form-label" for="form3Examplea3">Especifique</label>
+                                                <input type="text" id="form3Examplea3"
+                                                    class="form-control form-control-lg"
+                                                    formControlName="espeVacunas" />
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="mb-4 pb-2">
+                                            <div class="form-outline form-white">
+                                                <label class="form-label" for="form3Examplea3">Especifique</label>
+                                                <input type="text" id="form3Examplea3"
+                                                    class="form-control form-control-lg"
+                                                    formControlName="espePrenada" />
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-10 mb-4 pb-2">
+                                            <div class="form-outline form-white">
+                                                <label class="form-label" for="form3Examplea2">Anticonceptivos</label>
+                                                <div class="form-outline">
+
+
+                                                    <select class="select form-control-lg" formControlName="anticonceptivos">
+                                                        <option value="0" disabled>Seleccione una opcion
+                                                        </option>
+                                                        <option value="true">Si</option>
+                                                        <option value="false">No</option>
+                                                    </select>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+
+                                        <div class="col-md-10 mb-4 pb-2">
+                                            <div class="form-outline form-white">
+                                                <label class="form-label" for="form3Examplea2">Desparcitado</label>
+                                                <div class="form-outline">
+
+
+                                                    <select class="select form-control-lg" formControlName="desparasitado">
+                                                        <option value="0" disabled>Seleccione una opcion
+                                                        </option>
+                                                        <option value="true">Si</option>
+                                                        <option value="false">No</option>
+                                                    </select>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-md-10 mb-4 pb-2">
+
+                                            <input type="text" id="form3Examplea3"
+                                            class="form-control form-control-lg"
+                                            formControlName="horaAyuno" />
+                                        <label class="form-label" for="form3Examplea3">Horas de ayuno</label>
+                                        </div>
+
+
+                                  
+
+
+                                        <button [disabled]="registerForm.invalid" type="submit"
+                                            class="btn btn-dark btn-lg" data-mdb-ripple-color="dark">Registrar
+                                            Adopcion</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-4 pb-2">
+                            <div class="form-outline form-white">
+                                <input type="text" id="form3Examplea3"
+                                    class="form-control form-control-lg"
+                                    formControlName="comentarios" />
+                                <label class="form-label" for="form3Examplea3">OBSERVACIONES</label>
+                            </div>
+                        </div>
+
+                        <H2 class="text-center" >AUTORIZO</H2>
+                        <p class="text-center" >Al medico y encargados de esta jornada de castracion a bajo costo organizada para relizar la cirugia de:</p>
+                        <p class="text-center" >Se me ha dado a conocer que antes de hacer una esterilizadcion es indispensable que la masscota ete vacunda, desparsitada
+                            , tomando en cuenta tambien que mi macota goza de plnea salud. Tambien se me informo que no se le realizaron examense previos (ematologia,pruebas hepáticas y orina)
+                            a esta por ser una jornada de bajo costo. Dando a conocer solamente le historia lque yo le he brindado
+                        </p>
+                        <p class="text-center" >Estoy enterado que el procedimiento quirurgico sera realizado bajo efectos de anestesia general y 
+                            conozco los riesgos que por si mismo conlleva. ANte lo cual eximo de cualquier culpabilidad Administrativa, penal y civil al presonal MEDICO y ENCARGADO DE ESTA JORNADA,
+                            ante cualquier eventualidad que se presente durante o despues del proceso quirurgico.
+                        </p>
+                        
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </form>
+</section>

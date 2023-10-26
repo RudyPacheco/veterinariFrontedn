@@ -1,0 +1,142 @@
+<app-navbar></app-navbar>
+<section class="h-100 h-custom gradient-custom-2">
+  <form [formGroup]="registerForm"  (ngSubmit)="registrarAdopcion()" >
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12">
+          <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+            <div class="card-body p-0">
+              <div class="row g-0">
+               
+                <div class="col-lg-6">
+                 
+                  <div class="p-5">
+                   
+
+
+          
+                    <h3 class="fw-normal mb-5" style="color: #4835d4;">Infomacion del adoptante</h3>
+
+                    
+                    <div class="row">
+                      <div class="col-md-6 mb-4 pb-2">
+  
+                        <div class="form-outline">
+                          <label class="form-label" for="form3Examplev2">Nombres</label>
+                       
+                          <input type="text" id="form3Examplev2" class="form-control form-control-lg" formControlName="nombres" />
+                           </div>
+  
+                      </div>
+                      <div class="col-md-6 mb-4 pb-2">
+  
+                        <div class="form-outline">
+                          <label class="form-label" for="form3Examplev3">Apellidos</label>
+                        
+                          <input type="text" id="form3Examplev3" class="form-control form-control-lg" formControlName="apellidos" />
+                          </div>
+  
+                      </div>
+                    </div>
+  
+
+  
+                    <div class="row">
+                      <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
+  
+                        <div class="form-outline">
+                          <label class="form-label" for="form3Examplev5">Edad</label>
+                       
+                          <input type="number" id="form3Examplev5" class="form-control form-control-lg" formControlName="edad" />
+                         </div>
+                        <div class="form-outline">
+                          <label class="form-label" for="form3Examplev3">Numero de telefono</label>
+                        
+                          <input type="text" id="form3Examplev3" class="form-control form-control-lg" formControlName="telefono" />
+                         </div>
+                        <div class="form-outline">
+                          <label class="form-label" for="form3Examplev3">Fecha de adopcion</label>
+                        
+                          <input type="date" class="form-control form-control-lg" id="birthdayDate" formControlName="fecha" />
+                         </div>
+  
+  
+                      </div>
+    
+                    </div>
+  
+                  </div>
+                </div>
+                <div class="col-lg-6 bg-indigo ">
+                  <div class="p-5">
+                    <h3 class="fw-normal mb-5">Informacion de la mascota</h3>
+                    <div class="mb-4 pb-2">
+                      <div class="form-outline form-white">
+                        <label class="form-label" for="form3Examplea2">Tipo de mascota</label>
+                     
+                        <div class="form-outline">
+                          <select class="select form-control-lg" formControlName="tipo">
+                            <option value="0" disabled>Seleccione una opcion</option>
+                            <option value="1">Perro</option>
+                            <option value="2">Gato</option>
+                          </select>
+  
+                        </div>
+                        </div>
+                    </div>
+                    <div class="mb-4 pb-2">
+                      <div class="form-outline form-white">
+                        <label class="form-label" for="form3Examplea2">Tamaño de la mascota</label>
+                      
+                        <div class="form-outline">
+                          <select class="select form-control-lg" formControlName="tamanio" >
+                              <option value="0" disabled>Seleccione una opcion</option>
+                              <option value="1">pequeña</option>
+                              <option value="2">mediana</option>
+                              <option value="3">grande</option>
+                            </select>
+  
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-4 pb-2">
+                      <div class="form-outline form-white">
+                        <label class="form-label" for="form3Examplea2">Sexo de la mascota</label>
+                      
+                        <div class="form-outline">
+                          <select class="select form-control-lg" formControlName="sexo">
+                              <option value="0" disabled>Seleccione una opcion</option>
+                              <option value="1">Macho</option>
+                              <option value="2">Hembra</option>
+
+                            </select>
+  
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="mb-4 pb-2">
+                      <div class="form-outline form-white">
+                        <label class="form-label" for="form3Examplea3">Comentarios Adicionales</label>
+                      
+                        <input type="text" id="form3Examplea3" class="form-control form-control-lg" formControlName="comentarios" />
+                        </div>
+                    </div>
+  
+             
+  
+  
+                    <button  [disabled]="registerForm.invalid" type="submit" class="btn btn-dark btn-lg"
+                      data-mdb-ripple-color="dark">Registrar Adopcion</button>
+              
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </form>
+  </section>

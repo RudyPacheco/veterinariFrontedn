@@ -1,0 +1,80 @@
+<app-navbar></app-navbar>
+<section class="intro">
+    <div class="bg-image h-100" style="background-color: #f5f7fa;">
+      <div class="mask d-flex align-items-center h-100">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body p-0">
+                  <div class="table-responsive table-scroll" data-mdb-perfect-scrollbar="true" style="position: relative; height: 700px">
+                    <table class="table table-striped mb-0">
+                      <thead style="background-color: #002d72;">
+                        <tr>
+                          <th scope="col">No.</th>
+                          <th scope="col">Nombre </th>
+                          <th scope="col">Dpi Adoptante</th>
+                          <th scope="col">Direccion</th>
+                          <th scope="col">Telefono</th>
+                          <th scope="col">Nombre Mascota</th>
+                          <th scope="col">Turno</th>
+                          <th scope="col">Sexo</th>
+                          <th scope="col">Tipo de mascota</th>
+                          <th scope="col">Vacunas</th>
+                          <th scope="col">Especificado</th>
+                          <th scope="col">desparasitado</th>
+                          <th scope="col">Preñada</th>
+                          <th scope="col">Especificado</th>
+                          <th scope="col">Edad</th>
+                          <th scope="col">Anticonceptivos</th>
+                          <th scope="col">Enfermedad</th>
+                          <th scope="col">Horas de ayuno</th>
+                          <th scope="col">Fecha</th>
+                          <th scope="col">Autorizado</th>
+                          <th scope="col">Observaciones</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let esterilizacion of listaEsterilizacion; let i = index">
+                          <td>{{i+1}}</td>
+                          <td>{{esterilizacion.nombres}}</td>
+                          <td> {{esterilizacion.dpi}}</td>
+                          <td> {{esterilizacion.direccion}}</td>
+                          <td> {{esterilizacion.telefono}}</td>
+                          <td> {{esterilizacion.nombremascota}}</td>
+                          <td> {{esterilizacion.numeroturno}}</td>
+                          <td *ngIf="esterilizacion.sexo==1" >Macho</td>
+                          <td *ngIf="esterilizacion.sexo==2" >Hembra</td>
+                          <td *ngIf="esterilizacion.tipo==1" >Perro</td>
+                          <td *ngIf="esterilizacion.tipo==2" >Gato</td>
+                          <td *ngIf="esterilizacion.vacunas==true" >Si</td>
+                          <td *ngIf="esterilizacion.vacunas==false" >No</td>
+                          <td> {{esterilizacion.espevacunas}}</td>
+                          <td *ngIf="esterilizacion.desparasitado==true"> Si</td>
+                          <td *ngIf="esterilizacion.desparasitado==false"> No</td>
+                          <td *ngIf="esterilizacion.preanada==true">Si</td>
+                          <td *ngIf="esterilizacion.preanada==false">No</td>
+                          <td> {{esterilizacion.espeprenada}}</td>
+                          <td> {{esterilizacion.edadmascota}}</td>
+                          <td *ngIf="esterilizacion.anticonceptivos==true"> Si</td>
+                          <td *ngIf="esterilizacion.anticonceptivos==false">No</td>
+                          <td> {{esterilizacion.enfermedad}}</td>
+                          <td> {{esterilizacion.horaayuno}}</td>
+                          <td> {{esterilizacion.fecha.substring(0, 10)}}</td>
+                          <td *ngIf="esterilizacion.autorizado==true" >Si</td>
+                          <td *ngIf="esterilizacion.autorizado==false" >No</td>
+                          <td> {{esterilizacion.observaciones}}</td>
+                        </tr>
+                       
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

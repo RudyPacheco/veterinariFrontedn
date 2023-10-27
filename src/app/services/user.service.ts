@@ -26,6 +26,16 @@ export class usuarioService{
     readonly APY_DESACTIVAR = "http://localhost:3000/user/desactivar";
 
 
+
+    readonly APY_REMOTE_URL = "https://veterinaria-backed.vercel.app/user/registrar"
+
+
+    readonly APY_REMOTE_URL2 = "https://veterinaria-backed.vercel.app/user/getUsers"
+
+    readonly APY_REMOTE_Activar = "https://veterinaria-backed.vercel.app/user/activa"
+
+    readonly APY_REMOTE_DESACTIVAR = "http://localhost:3000/user/user/desactivar";
+
     constructor(private httpClient: HttpClient) {  }
 
     public registrarUsuario(usuario:usuario): Observable<usuario>{

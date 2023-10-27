@@ -18,17 +18,17 @@ export class adopcionService{
     
 
     readonly APY_URL = "http://localhost:3000/adopcion";
-
+    readonly APY_REMOTE_URL = "https://veterinaria-backed.vercel.app/adopcion"
 
     constructor(private httpClient: HttpClient) {  }
 
     public registrarRescate(adopcion:adopcionModel): Observable<adopcionModel>{
-        return this.httpClient.post<adopcionModel>(this.APY_URL+"/registrar",adopcion);
+        return this.httpClient.post<adopcionModel>(this.APY_REMOTE_URL+"/registrar",adopcion);
     }
 
 
     public listarAdopciones(): Observable<adopcionModel[]> {
-        return this.httpClient.get<adopcionModel[]>(this.APY_URL+"/listar");
+        return this.httpClient.get<adopcionModel[]>(this.APY_REMOTE_URL+"/listar");
       }
 
 

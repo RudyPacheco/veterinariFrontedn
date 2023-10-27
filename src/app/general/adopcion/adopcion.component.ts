@@ -21,6 +21,7 @@ export class AdopcionComponent implements OnInit {
     this.registerForm = this.formBuilder.group({
       nombres: ["", [Validators.required]],
       apellidos: ["", [Validators.required]],
+      dpiadoptante: ["", [Validators.required]],
       edad:["",[Validators.required]],
       telefono:["",[Validators.required]],
       tamanio:["",[Validators.required]],

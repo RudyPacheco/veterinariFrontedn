@@ -39,21 +39,21 @@ export class usuarioService{
     constructor(private httpClient: HttpClient) {  }
 
     public registrarUsuario(usuario:usuario): Observable<usuario>{
-        return this.httpClient.post<usuario>(this.APY_URL,usuario);
+        return this.httpClient.post<usuario>(this.APY_REMOTE_URL,usuario);
     }
 
     public listarUsuarios(): Observable<usuario[]> {
-        return this.httpClient.get<usuario[]>(this.APY_URL2);
+        return this.httpClient.get<usuario[]>(this.APY_REMOTE_URL2);
       }
 
 
       public descativarUsuario(usuario:usuario): Observable<usuario>{
-        return this.httpClient.post<usuario>(this.APY_DESACTIVAR,usuario);
+        return this.httpClient.post<usuario>(this.APY_REMOTE_Activar,usuario);
     }
 
 
     public activarUsuario(usuario:usuario): Observable<usuario>{
-        return this.httpClient.post<usuario>(this.APY_ACTIVAR,usuario);
+        return this.httpClient.post<usuario>(this.APY_REMOTE_DESACTIVAR,usuario);
     }
 
     

@@ -1,3 +1,19 @@
 input{
     border-color: black;
 }
+
+form{
+    background-color: rgba(97, 187, 248, 0.938);
+}
+
+label{
+    font-weight: bold;
+}
+
+.gradient-custom{
+    background-color: rgba(97, 187, 248, 0.938);
+}
+
+section{
+    background-color: rgba(97, 187, 248, 0.938);
+}

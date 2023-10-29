@@ -2,6 +2,8 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { estereilizacionModel } from "../models/esteerilizacionModel";
+import { fechaModel } from "../models/busquedaFecha";
+import { eliminarModel } from "../models/eliminarModel";
 
 
 
@@ -32,6 +34,16 @@ export class esterilizacionServie{
       }
 
 
+
+      public listarEsterilizacionFecha(fechaModel:fechaModel): Observable<estereilizacionModel[]> {
+        return this.httpClient.post<estereilizacionModel[]>(this.APY_REMOTE_URL+"/listarFecha",fechaModel);
+      }
+
   
+      
+      public eliminarRegistro(index:eliminarModel): Observable<estereilizacionModel> {
+        return this.httpClient.post<estereilizacionModel>(this.APY_REMOTE_URL+"/eliminar",index);
+      }
+
 
 }

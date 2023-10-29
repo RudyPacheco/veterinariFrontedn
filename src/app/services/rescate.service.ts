@@ -4,6 +4,8 @@ import { Observable } from "rxjs";
 
 
 import { rescateModel } from "../models/rescateModel";
+import { fechaModel } from "../models/busquedaFecha";
+import { eliminarModel } from "../models/eliminarModel";
 
 @Injectable({
     providedIn:'root'
@@ -31,6 +33,14 @@ export class rescateService{
       }
 
 
+      public listarRescatesFecha(fechaModel:fechaModel): Observable<rescateModel[]> {
+        return this.httpClient.post<rescateModel[]>(this.APY_REMOTE_URL+"/listarFecha",fechaModel);
+      }
+
+
+      public eliminarRegistro(index:eliminarModel): Observable<rescateModel> {
+        return this.httpClient.post<rescateModel>(this.APY_REMOTE_URL+"/eliminar",index);
+      }
   
 
 }

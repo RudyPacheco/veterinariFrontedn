@@ -30,3 +30,28 @@ thead {
   top: 0;
   position: sticky;
 }
+
+
+
+
+.date-input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+
+input{
+  border-radius: 10px;
+  border-color: black;
+  margin-right: 20px;
+}
+
+label{
+  margin-right: 10px;
+}
+
+
+
+

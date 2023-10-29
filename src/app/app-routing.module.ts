@@ -10,6 +10,7 @@ import { RegistroAdopcionesComponent } from './general/registro-adopciones/regis
 import { CreacionUsuarioComponent } from './admin/creacion-usuario/creacion-usuario.component';
 import { ControlUsuarioComponent } from './admin/control-usuario/control-usuario.component';
 import { RegitroEsterilizacionComponent } from './general/regitro-esterilizacion/regitro-esterilizacion.component';
+import { RecuperacionComponent } from './componentes/recuperacion/recuperacion.component';
 
 const routes: Routes = [
 
@@ -23,7 +24,8 @@ const routes: Routes = [
 {path:'registroAdopcion',component:RegistroAdopcionesComponent},
 {path:'creacionUser',component:CreacionUsuarioComponent},
 {path:'gestionUser',component:ControlUsuarioComponent},
-{path:'registroEsterilizacion',component:RegitroEsterilizacionComponent}
+{path:'registroEsterilizacion',component:RegitroEsterilizacionComponent},
+{path:'recuperacion',component:RecuperacionComponent}
 ];
 
 @NgModule({

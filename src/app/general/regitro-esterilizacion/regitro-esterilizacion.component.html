@@ -32,6 +32,7 @@
                           <th scope="col">Fecha</th>
                           <th scope="col">Autorizado</th>
                           <th scope="col">Observaciones</th>
+                          <th scope="col">Acciones</th>
                           
                         </tr>
                       </thead>
@@ -65,6 +66,8 @@
                           <td *ngIf="esterilizacion.autorizado==true" >Si</td>
                           <td *ngIf="esterilizacion.autorizado==false" >No</td>
                           <td> {{esterilizacion.observaciones}}</td>
+                          <td> <button class="btn btn-danger" (click)="eliminarValor(esterilizacion.id_adopcion)" >Eliminar</button></td>
+                       
                         </tr>
                        
                       </tbody>
@@ -77,4 +80,5 @@
         </div>
       </div>
     </div>
+    <button (click)="generarPdf()" >Descargar</button>
   </section>

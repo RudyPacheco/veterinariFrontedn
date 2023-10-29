@@ -5,6 +5,8 @@ import { Observable } from "rxjs";
 
 import { rescateModel } from "../models/rescateModel";
 import { adopcionModel } from "../models/adopcionModel";
+import { fechaModel } from "../models/busquedaFecha";
+import { eliminarModel } from "../models/eliminarModel";
 
 @Injectable({
     providedIn:'root'
@@ -32,6 +34,14 @@ export class adopcionService{
       }
 
 
+      public listarAdopcionFecha(fechaModel:fechaModel): Observable<adopcionModel[]> {
+        return this.httpClient.post<adopcionModel[]>(this.APY_REMOTE_URL+"/listarFecha",fechaModel);
+      }
+
   
+      public eliminarRegistro(index:eliminarModel): Observable<adopcionModel> {
+        return this.httpClient.post<adopcionModel>(this.APY_REMOTE_URL+"/eliminar",index);
+      }
+
 
 }

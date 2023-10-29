@@ -25,6 +25,7 @@ export class RescateComponent {
       tipo:["",[Validators.required]],
       sexo:["",[Validators.required]],
       estado:["",[Validators.required]],
+      caracteristicas:["",[Validators.required]],
       
     });
   }

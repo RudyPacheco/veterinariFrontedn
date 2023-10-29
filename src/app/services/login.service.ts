@@ -17,10 +17,12 @@ export class loginServices{
 
     usuarioLog!:usuario;
 
-    readonly APY_URL = "http://localhost:3000/user/login";
+    readonly APY_URL = "http://localhost:3000/user";
 
 
    readonly APY_REMOTE_URL = "https://veterinaria-backed.vercel.app/user/login"
+
+   readonly APY_REMOTE_RECUPERAR = "https://veterinaria-backed.vercel.app/user"
 
 
     constructor(private httpClient: HttpClient) {  }
@@ -60,5 +62,11 @@ export class loginServices{
     public getUsuario(){
         return this.usuarioLog;
     }
+
+  
+
+    public recuperarContrasena(usuario:usuarioLogin): Observable<usuario>{
+      return this.httpClient.post<usuario>(this.APY_REMOTE_RECUPERAR+"/recuperar",usuario)
+  }
 
 }

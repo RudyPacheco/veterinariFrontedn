@@ -1,13 +1,23 @@
 <app-navbar></app-navbar>
 <section class="intro">
-    <div class="bg-image h-100" style="background-color: #f5f7fa;">
-      <div class="mask d-flex align-items-center h-100">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-12">
-              <div class="card">
-                <div class="card-body p-0">
-                  <div class="table-responsive table-scroll" data-mdb-perfect-scrollbar="true" style="position: relative; height: 700px">
+  <div class="date-input-container">
+                          
+    <label class="form-label" for="typeText">Fecha Inicial</label>
+    <input type="date" id="fecha1" name="fecha1" [(ngModel)]="fechaIncial1">
+                          
+    <label class="form-label" for="typeText">Fecha Final</label>
+    <input type="date" id="fecha2" name="fecha2" [(ngModel)]="fechaFinalL" >
+    <button class="btn btn-primary" (click)="generarReporteFecha()" >Filtrar</button>
+</div>
+
+  <div class="bg-image h-100" style="background-color: #f5f7fa;">
+    <div class="mask d-flex align-items-center h-100">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body p-0">
+                <div class="table-responsive table-scroll" data-mdb-perfect-scrollbar="true" style="position: relative; height: 700px">
                     <table class="table table-striped mb-0">
                       <thead style="background-color: #002d72;">
                         <tr>
@@ -22,6 +32,7 @@
                           <th scope="col">Tipo de mascota</th>
                           <th scope="col">Sexo</th>
                           <th scope="col">Comentarios</th>
+                          <th scope="col">Acciones</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -41,6 +52,7 @@
                           <td *ngIf="adopcion.sexo==1" >Macho</td>
                           <td *ngIf="adopcion.sexo==2" >Hembra</td>
                           <td>{{adopcion.comentarios}}</td>
+                          <td> <button class="btn btn-danger">Eliminar</button></td>
                         </tr>
                        
                       </tbody>
@@ -53,4 +65,5 @@
         </div>
       </div>
     </div>
+    <button (click)="generarPdf()">Descargar</button>
   </section>

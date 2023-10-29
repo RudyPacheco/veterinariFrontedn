@@ -1,4 +1,5 @@
 export class estereilizacionModel{
+      id_adopcion!:number;
       nombres!:String
       dpi!:String;
       direccion!:String

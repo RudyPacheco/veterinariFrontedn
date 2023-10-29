@@ -16,6 +16,7 @@ import { RegistroAdopcionesComponent } from './general/registro-adopciones/regis
 import { RegistroRescatesComponent } from './general/registro-rescates/registro-rescates.component';
 import { ControlUsuarioComponent } from './admin/control-usuario/control-usuario.component';
 import { RegitroEsterilizacionComponent } from './general/regitro-esterilizacion/regitro-esterilizacion.component';
+import { RecuperacionComponent } from './componentes/recuperacion/recuperacion.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { RegitroEsterilizacionComponent } from './general/regitro-esterilizacion
     RegistroAdopcionesComponent,
     RegistroRescatesComponent,
     ControlUsuarioComponent,
-    RegitroEsterilizacionComponent
+    RegitroEsterilizacionComponent,
+    RecuperacionComponent
   ],
   imports: [
     BrowserModule,

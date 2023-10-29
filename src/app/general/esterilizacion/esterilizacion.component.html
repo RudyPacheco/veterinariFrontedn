@@ -1,12 +1,12 @@
 <app-navbar></app-navbar>
-<section class="h-100 h-custom gradient-custom-2">
+<section class="h-custom gradient-custom-2">
     <form [formGroup]="registerForm" (ngSubmit)="registrarEsterilizacion()">
         <div class="container py-5 h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-12">
-                    <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+                    <div class="card card-registration card-registration-2" id="pdfDiv" style="border-radius: 15px;">
                         <div class="card-body p-0">
-                            <div class="row g-0">
+                            <div class="row g-0" >
                                 <h1 class="text-center">Autorizacion Esterilizacion</h1>
                                 <div class="col-lg-6">
 
@@ -119,8 +119,7 @@
                                                 <label class="form-label" for="form3Examplea3">Sufre de alguna
                                                     enremedad/ha estado enfermo</label>
                                                 <input type="text" id="form3Examplea3"
-                                                    class="form-control form-control-lg"
-                                                    formControlName="enfermedad" />
+                                                    class="form-control form-control-lg" formControlName="enfermedad" />
 
                                             </div>
                                         </div>
@@ -136,7 +135,7 @@
                                                 adopcion</label>
                                         </div>
 
-                                        
+
 
 
 
@@ -225,7 +224,8 @@
                                                 <div class="form-outline">
 
 
-                                                    <select class="select form-control-lg" formControlName="anticonceptivos">
+                                                    <select class="select form-control-lg"
+                                                        formControlName="anticonceptivos">
                                                         <option value="0" disabled>Seleccione una opcion
                                                         </option>
                                                         <option value="true">Si</option>
@@ -245,7 +245,8 @@
                                                 <div class="form-outline">
 
 
-                                                    <select class="select form-control-lg" formControlName="desparasitado">
+                                                    <select class="select form-control-lg"
+                                                        formControlName="desparasitado">
                                                         <option value="0" disabled>Seleccione una opcion
                                                         </option>
                                                         <option value="true">Si</option>
@@ -259,19 +260,16 @@
 
                                         <div class="col-md-10 mb-4 pb-2">
 
-                                            <input type="text" id="form3Examplea3"
-                                            class="form-control form-control-lg"
-                                            formControlName="horaAyuno" />
-                                        <label class="form-label" for="form3Examplea3">Horas de ayuno</label>
+                                            <input type="number" id="form3Examplea3" class="form-control form-control-lg"
+                                                formControlName="horaAyuno" />
+                                            <label class="form-label" for="form3Examplea3">Horas de ayuno</label>
                                         </div>
 
 
-                                  
 
 
-                                        <button [disabled]="registerForm.invalid" type="submit"
-                                            class="btn btn-dark btn-lg" data-mdb-ripple-color="dark">Registrar
-                                            Esterilizacion</button>
+
+
 
                                     </div>
                                 </div>
@@ -280,30 +278,53 @@
 
                         <div class="mb-4 pb-2">
                             <div class="form-outline form-white">
-                                <input type="text" id="form3Examplea3"
-                                    class="form-control form-control-lg"
+                                <input type="text" id="form3Examplea3" class="form-control form-control-lg"
                                     formControlName="comentarios" />
                                 <label class="form-label" for="form3Examplea3">OBSERVACIONES</label>
                             </div>
                         </div>
 
-                        <H2 class="text-center" >AUTORIZO</H2>
-                        <p class="text-center" >Al medico y encargados de esta jornada de castracion a bajo costo organizada para relizar la cirugia de:</p>
-                        <p class="text-center" >Se me ha dado a conocer que antes de hacer una esterilizadcion es indispensable que la masscota ete vacunda, desparsitada
-                            , tomando en cuenta tambien que mi macota goza de plnea salud. Tambien se me informo que no se le realizaron examense previos (ematologia,pruebas hepáticas y orina)
-                            a esta por ser una jornada de bajo costo. Dando a conocer solamente le historia lque yo le he brindado
+                        <H2 class="text-center">AUTORIZO</H2>
+                        <p align="center">Al medico y encargados de esta jornada de castracion a bajo costo organizada
+                            para relizar la cirugia de:</p>
+                        <p align="center">Se me ha dado a conocer que antes de hacer una esterilizadcion es
+                            indispensable que la masscota ete vacunda, desparsitada
+                            , tomando en cuenta tambien que mi macota goza de plnea salud. Tambien se me informo que no
+                            se le realizaron examense previos (ematologia,pruebas hepáticas y orina)
+                            a esta por ser una jornada de bajo costo. Dando a conocer solamente le historia lque yo le
+                            he brindado
                         </p>
-                        <p class="text-center" >Estoy enterado que el procedimiento quirurgico sera realizado bajo efectos de anestesia general y 
-                            conozco los riesgos que por si mismo conlleva. ANte lo cual eximo de cualquier culpabilidad Administrativa, penal y civil al presonal MEDICO y ENCARGADO DE ESTA JORNADA,
+                        <p align="center">Estoy enterado que el procedimiento quirurgico sera realizado bajo efectos de
+                            anestesia general y
+                            conozco los riesgos que por si mismo conlleva. ANte lo cual eximo de cualquier culpabilidad
+                            Administrativa, penal y civil al presonal MEDICO y ENCARGADO DE ESTA JORNADA,
                             ante cualquier eventualidad que se presente durante o despues del proceso quirurgico.
                         </p>
-                        
-                        
+
+                        <p align="center">Firma : _______________________________</p>
+
+
+
+
+
                     </div>
                 </div>
-                
+
             </div>
         </div>
 
     </form>
+
+    <div class="col-lg-6 bg-indigo ">
+        <div class="p-5">
+        <button [disabled]="registerForm.invalid" type="submit" class="btn btn-dark btn-lg"
+            data-mdb-ripple-color="dark">Registrar
+            Esterilizacion</button>
+    </div>
+    <div class="p-5">
+        <!--[disabled]="registerForm.invalid"-->
+        <button (click)="generarPdf()" class="btn btn-dark btn-lg" data-mdb-ripple-color="dark">Imprimir
+            Autorizacion</button>
+    </div>
+    </div>
 </section>

@@ -1,5 +1,14 @@
 <app-navbar></app-navbar>
 <section class="intro">
+  <div class="date-input-container">
+                          
+    <label class="form-label" for="typeText">Fecha Inicial</label>
+    <input type="date" id="fecha1" name="fecha1" [(ngModel)]="fechaIncial1">
+                          
+    <label class="form-label" for="typeText">Fecha Final</label>
+    <input type="date" id="fecha2" name="fecha2" [(ngModel)]="fechaFinalL" >
+    <button class="btn btn-primary" (click)="generarReporteFecha()" >Filtrar</button>
+</div>
     <div class="bg-image h-100" style="background-color: #f5f7fa;">
       <div class="mask d-flex align-items-center h-100">
         <div class="container">
@@ -80,5 +89,5 @@
         </div>
       </div>
     </div>
-    <button (click)="generarPdf()" >Descargar</button>
+    <button class="btn btn-success" (click)="generarPdf()" >Descargar</button>
   </section>

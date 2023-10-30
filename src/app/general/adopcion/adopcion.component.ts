@@ -21,7 +21,7 @@ export class AdopcionComponent implements OnInit {
     this.registerForm = this.formBuilder.group({
       nombres: ["", [Validators.required]],
       apellidos: ["", [Validators.required]],
-      dpiadoptante: ["", [Validators.required,Validators.minLength(13),Validators.maxLength(13)]],
+      dpiadoptante: ["", [Validators.required,Validators.maxLength(13),Validators.minLength(12)]],
       edad:["",[Validators.required]],
       telefono:["",[Validators.required]],
       tamanio:["",[Validators.required]],
@@ -35,32 +35,63 @@ export class AdopcionComponent implements OnInit {
 
 
   registrarAdopcion(){
-    console.log(this.registerForm.value);
+
+
+    if (this.registerForm.valid) {
+
+      let tamanio:number = this.registerForm.get('dpiadoptante')?.value;
+      let tamanioString = tamanio.toString();
+      if (tamanioString.length==13) {
+        
+
+
+
+
+        console.log(this.registerForm.value);
 
     
-    this.adopcionService.registrarRescate(this.registerForm.value).subscribe((created: adopcionModel) => {
-
-      console.log("entro a enviado")
-
-      if (created) {
-        this.router.navigate(['home']);
-        Swal.fire({
-          icon: "success",
-          title: "Realizado",
-          text: "Adopcion registrada exitosamente"
+        this.adopcionService.registrarRescate(this.registerForm.value).subscribe((created: adopcionModel) => {
+    
+          console.log("entro a enviado")
+    
+          if (created) {
+            this.router.navigate(['home']);
+            Swal.fire({
+              icon: "success",
+              title: "Realizado",
+              text: "Adopcion registrada exitosamente"
+            })
+          }else{
+            Swal.fire({
+              icon: "error",
+              title: "Credenciales incorrectos",
+              text: "Vuelve a intentarlo"
+            })
+          }
+    
+    
+    
+    
         })
+
+
+
+
+
+
       }else{
-        Swal.fire({
-          icon: "error",
-          title: "Credenciales incorrectos",
-          text: "Vuelve a intentarlo"
-        })
+        //error
+        console.log("error 1");
+        let mensaje = "El dpi debe de tener un tamaño de 13"
+        Swal.fire(mensaje)
+
       }
+    }else{
+      console.log("error 2");
+      
+    }
 
 
-
-
-    })
   }
 
 

@@ -52,7 +52,7 @@
                           <td *ngIf="adopcion.sexo==1" >Macho</td>
                           <td *ngIf="adopcion.sexo==2" >Hembra</td>
                           <td>{{adopcion.comentarios}}</td>
-                          <td> <button class="btn btn-danger">Eliminar</button></td>
+                          <td> <button class="btn btn-danger" (click)="eliminarValor(adopcion.id_adopcion)">Eliminar</button></td>
                         </tr>
                        
                       </tbody>

@@ -288,7 +288,7 @@
                         <p align="center">Al medico y encargados de esta jornada de castracion a bajo costo organizada
                             para relizar la cirugia de:</p>
                         <p align="center">Se me ha dado a conocer que antes de hacer una esterilizadcion es
-                            indispensable que la masscota ete vacunda, desparsitada
+                            indispensable que la mascota este vacunda, desparsitada
                             , tomando en cuenta tambien que mi macota goza de plnea salud. Tambien se me informo que no
                             se le realizaron examense previos (ematologia,pruebas hepáticas y orina)
                             a esta por ser una jornada de bajo costo. Dando a conocer solamente le historia lque yo le
@@ -301,7 +301,7 @@
                             ante cualquier eventualidad que se presente durante o despues del proceso quirurgico.
                         </p>
 
-                        <p align="center">Firma : _______________________________</p>
+                        <p align="center">Firma : ________________________________________________________</p>
 
 
 
@@ -312,15 +312,15 @@
 
             </div>
         </div>
-
+        <div class="p-5">
+            <button [disabled]="registerForm.invalid" type="submit" class="btn btn-dark btn-lg"
+                data-mdb-ripple-color="dark">Registrar
+                Esterilizacion</button>
+        </div>
     </form>
 
     <div class="col-lg-6 bg-indigo ">
-        <div class="p-5">
-        <button [disabled]="registerForm.invalid" type="submit" class="btn btn-dark btn-lg"
-            data-mdb-ripple-color="dark">Registrar
-            Esterilizacion</button>
-    </div>
+
     <div class="p-5">
         <!--[disabled]="registerForm.invalid"-->
         <button (click)="generarPdf()" class="btn btn-dark btn-lg" data-mdb-ripple-color="dark">Imprimir

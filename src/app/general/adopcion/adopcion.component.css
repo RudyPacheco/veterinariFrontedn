@@ -29,6 +29,7 @@
 
     input{
         border-color: black;
+        font-size: large;
     }
 
     form{
@@ -37,4 +38,10 @@
 
     label{
         font-weight: bold;
+        font-size:larger;
+    }
+
+
+    p{
+        font-size: large;
     }

@@ -40,7 +40,7 @@
                           <td *ngIf="rescate.sexo==1" >Macho</td>
                           <td *ngIf="rescate.sexo==2" >Hembra</td>
                           <td>{{rescate.condicion}}</td>
-                          <td> <button class="btn btn-danger">Eliminar</button></td>
+                          <td> <button class="btn btn-danger" (click)="eliminarValor(rescate.id_rescate)" >Eliminar</button></td>
                         </tr>
                        
                       </tbody>

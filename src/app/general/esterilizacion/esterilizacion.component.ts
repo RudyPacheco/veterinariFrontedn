@@ -26,9 +26,9 @@ export class EsterilizacionComponent implements OnInit {
 
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
-      nombres: ["Rudy", [Validators.required]],
+      nombres: ["", [Validators.required]],
       dpi:["", [Validators.required,Validators.minLength(13),Validators.maxLength(13)]],
-      direccion: ["Chiyax", [Validators.required]],
+      direccion: ["", [Validators.required]],
       telefono: ["", [Validators.required]],
       nombreMascota: ["", [Validators.required]],
       numeroTurno: ["", [Validators.required]],
@@ -52,6 +52,18 @@ export class EsterilizacionComponent implements OnInit {
 
   
   registrarEsterilizacion(){
+
+
+
+    if (this.registerForm.valid) {
+
+      let tamanio:number = this.registerForm.get('dpi')?.value;
+      let tamanioString = tamanio.toString();
+      if (tamanioString.length==13) {
+        
+
+
+
     console.log(this.registerForm.value);
 
     
@@ -79,6 +91,24 @@ export class EsterilizacionComponent implements OnInit {
 
 
     })
+
+
+
+  }else{
+    //error
+    console.log("error 1");
+    let mensaje = "El dpi debe de tener un tamaño de 13"
+    Swal.fire(mensaje)
+
+  }
+}else{
+  console.log("error 2");
+  
+}
+
+
+
+
   }
 
 
